@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gabriel dos Santos">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <main>
+
+        <section class="header">
+            <div class="players">
+
+                <div class="player_camp">
+                    <span class="camp_title">Jogador 1</span>
+                    <form class="form">
+                        <input type="text" id="player_1_name" placeholder="Insira o nome do jogador 1" required>
+                        <div>
+                            <select id="player_1_symbol" required>
+                                <option value="⭕">Círculo (⭕)</option>
+                                <option value="❌">Cruz (❌)</option>
+                            </select>
+                        </div>
+                        <button type="submit" id="player_1_save">Salvar</button>
+                    </form>
+                </div>
+                <hr>
+                <div class="player_camp">
+                    <span class="camp_title">Jogador 2</span>
+                    <form class="form">
+                        <input type="text" id="player_2_name" placeholder="Insira o nome do jogador 2" required>
+                        <div>
+                            <select id="player_2_symbol" required>
+                                <option value="⭕">Círculo (⭕)</option>
+                                <option value="❌">Cruz (❌)</option>
+                            </select>
+                        </div>
+                        <button type="submit" id="player_2_save">Salvar</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="score_view">
+                <span class="camp_title">Placar</span>
+                <br>
+                <span class="camp_subtitle" id="player_1_score">
+                    Jogador 1: <span>0</span>
+                </span> | 
+                <span class="camp_subtitle" id="player_2_score">
+                    Jogador 2: <span>0</span>
+                </span>
+            </div>
+
+        </section>
+
+        <section class="game">
+            <div>
+
+                <div class="top_grid">
+                    <div name="camp"></div>
+                    <div name="camp"></div>
+                    <div name="camp"></div>
+                </div>
+                <div class="middle_grid">
+                    <div name="camp"></div>
+                    <div name="camp"></div>
+                    <div name="camp"></div>
+                </div>
+                <div class="bottom_grid">
+                    <div name="camp"></div>
+                    <div name="camp"></div>
+                    <div name="camp"></div>
+                </div>
+
+            </div>
+
+            <div style="margin-top: 15px; text-align: center;">
+                <span id="turn">Sem Jogo em Andamento</span>
+                <span id="turn_meta" hidden>null</span>
+            </div>
+
+        </section>
+
+    </main>
+</body>
+</html>

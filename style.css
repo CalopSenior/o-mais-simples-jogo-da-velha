@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Ribeye&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: rgba(0, 0, 0, 0);
+    font-family: 'Ribeye', cursive;
+}
+body{
+    height: 100vh;
+}
+input, button{
+    box-shadow: -2px 2px var(--black);
+    border-radius: 10px;
+}
+hr{
+    border: 1px solid var(--black);
+    margin: 5px auto 5px auto;
+}
+:root{
+    --white: #f5f5f5;
+    --bone: #f6f9ee;
+    --black: #343434;
+    --blue: #74c2c2;
+    --red: #d05340;
+}
+.header {
+    border: 1px solid var(--black);
+    width: 100vw;
+    margin: 0 auto 0 auto;
+    background-color: var(--white);
+    gap: 8px;
+    padding: 5px;
+    justify-content: center;
+    align-content: center;
+    min-height: max-content;
+}
+.players {
+    display: flex;
+    gap: 8px;
+    padding: 5px;
+    background-color: var(--bone);
+    border: 3px solid var(--black);
+    border-radius: 10px;
+    width: 90%;
+    margin: 0 auto 0 auto;
+    min-width: 265px;
+}
+.player_camp {
+    border: 1px solid var(--black);
+    border-radius: 10px;
+    width: 45%;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    min-width: 115px;
+}
+.camp_title {
+    font-size: clamp(1em, 1em + 1vw, 1.5em);
+}
+.camp_subtitle {
+    font-size: clamp(.75em, .75em + 1vw, 1em);
+}
+.camp_subtitle > span {
+    font-size: clamp(.85em, .85em + 1vw, 1.25em);
+}
+.form {
+    display: flex;
+    flex-direction: column;
+}
+.form > input {
+    width: 90%;
+    margin: 5px auto 5px auto;
+    padding: 10px;
+    border: 1px solid var(--black);
+}
+.form > button {
+    width: 90%;
+    background-color: var(--white);
+    margin: 5px auto 5px auto;
+    border: 1px solid var(--black);
+}
+.form > button:active {
+    box-shadow: inset -4px 2px var(--black);
+}
+.score_view {
+    gap: 8px;
+    padding: 5px;
+    background-color: var(--bone);
+    border: 3px solid var(--black);
+    border-radius: 10px;
+    width: 65%;
+    text-align: center;
+    margin: 15px auto 5px auto;
+    min-width: 265px;
+}
+.score_view > div {
+    display: flex;
+}
+.checkbox, .checkbox + span {
+    cursor: pointer;
+}
+.game {
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    border-radius: 10px;
+    margin: 15px auto 0 auto;
+    padding: 8px;
+    width: clamp(300px, 50%, 595px);
+    aspect-ratio: 1/1;
+}
+.game > div {
+    border: 1px solid var(--black);
+    border-radius: 10px;
+}
+.top_grid {
+    display: flex;
+    width: 100%;
+    aspect-ratio: 3/1;
+    border-radius: 10px 10px 0px 0px;
+    background-color: var(--bone);
+}
+.middle_grid {
+    display: flex;
+
+    width: 100%;
+    aspect-ratio: 3/1;
+    background-color: var(--bone);
+}
+.bottom_grid {
+    display: flex;
+    width: 100%;
+    aspect-ratio: 3/1;
+    border-radius: 0px 0px 10px 10px;
+    background-color: var(--bone);
+}
+.bottom_grid > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: clamp(4em, 4em + 3vw, 6em);
+    width: 33.3%;
+    aspect-ratio: 3/1;
+}
+.top_grid > div, .middle_grid > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: clamp(4em, 4em + 3vw, 6em);
+    width: 33.3%;
+    aspect-ratio: 3/1;
+    border-bottom: 1px solid var(--black);
+}
+.top_grid > div:nth-child(2), .middle_grid > div:nth-child(2), .bottom_grid > div:nth-child(2) {
+    border-right: 1px solid var(--black);
+    border-left: 1px solid var(--black);
+}
+
+/*javascript tag*/
+.winner {
+    color: var(--blue);
+}
+.loser {
+    color: var(--red);
+}
